@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mezemer Catering | Evente Dasmash</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F9F4E1',
+                        navy: '#2B2B2B',
+                        gold: '#8b0000',
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans tracking-wide leading-loose">
+    
+    <!-- A. Navigation (Header) -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-transform duration-300" id="navbar">
+        <div class="backdrop-blur-md bg-cream border-b border-gold/20 shadow-sm">
+            <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <!-- Left Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#services" class="text-gold hover:text-navy transition-colors duration-300 text-sm uppercase tracking-widest">Shërbimet</a>
+                    <a href="#menu" class="text-gold hover:text-navy transition-colors duration-300 text-sm uppercase tracking-widest">Menu</a>
+                    <a href="#about" class="text-gold hover:text-navy transition-colors duration-300 text-sm uppercase tracking-widest">Rreth Nesh</a>
+                </div>
+
+                <!-- Center Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="font-serif text-2xl md:text-3xl font-semibold text-gold tracking-wide">
+                        MeZemer
+                    </a>
+                </div>
+
+                <!-- Right Link -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="inline-block px-6 py-2 border border-gold text-navy hover:bg-gold hover:text-cream transition-all duration-300 text-sm uppercase tracking-widest">
+                        Na Kontaktoni
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-navy" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-cream/95 backdrop-blur-md border-b border-gold/20" id="mobile-menu">
+            <div class="px-6 py-4 flex flex-col gap-4">
+                <a href="#services" class="text-navy/80 hover:text-gold transition-colors text-sm uppercase tracking-widest">Shërbimet</a>
+                <a href="#menu" class="text-navy/80 hover:text-gold transition-colors text-sm uppercase tracking-widest">Menu</a>
+                <a href="#about" class="text-navy/80 hover:text-gold transition-colors text-sm uppercase tracking-widest">Rreth Nesh</a>
+                <a href="#contact" class="text-navy/80 hover:text-gold transition-colors text-sm uppercase tracking-widest">Na Kontaktoni</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- B. Hero Section -->
+    <section class="relative w-full h-[70vh] overflow-hidden">
+        <!-- Background Image with Scale Animation -->
+        <div class="absolute inset-0 hero-scale">
+            <img 
+                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                alt="Wedding Table Setting" 
+                class="w-full h-full object-cover"
+            >
+        </div>
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-navy/30"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 h-full flex flex-col items-center justify-center px-6">
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-center font-medium reveal">
+                <span class="text-cream">Me</span><span class="text-gold">Zemer</span><span class="text-cream">Catering</span>
+            </h1>
+            <p class="mt-6 w-full text-cream/90 text-lg md:text-xl tracking-wide reveal delay-200 text-center">
+                Përvoja kulinarike të zgjedhura për festën tuaj
+            </p>
+        </div>
+    </section>
+
+    <!-- C. Brand Introduction -->
+    <section id="about" class="py-24 md:py-32 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <p class="text-xl md:text-2xl text-navy leading-loose tracking-wide reveal">
+                Tek Mezemer Catering, besojmë se çdo dasmë tregon një histori. 
+                Qasja jonë e veçantë kombinon kuzhinën e shkëlqyer me shërbimin e pakrahasueshëm, 
+                duke krijuar momente që qëndrojnë në kujtesë edhe pas valës së fundit.
+            </p>
+            <div class="mt-12 w-24 h-px bg-gold mx-auto reveal delay-200"></div>
+        </div>
+    </section>
+
+    <!-- Full-Width Image Section -->
+    <section class="w-full h-48 md:h-80 lg:h-96 overflow-hidden">
+        <img 
+            src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+            alt="Wedding Celebration" 
+            class="w-full h-full object-cover"
+        >
+    </section>
+
+    <!-- D. "How It Works" (Process Section) -->
+    <section class="py-24 md:py-32 px-6 bg-cream">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-4xl md:text-5xl text-navy text-center mb-16 reveal">
+                Si Funksionon
+            </h2>
+            
+            <!-- 3-Column Grid - Maintained on Mobile -->
+            <div class="grid grid-cols-3 gap-2 md:gap-8">
+                <!-- Step 1 -->
+                <div class="text-center p-4 md:p-8 reveal delay-100">
+                    <div class="w-12 h-12 md:w-16 md:h-16 border border-gold rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                        <span class="font-serif text-lg md:text-2xl text-gold">1</span>
+                    </div>
+                    <h3 class="font-serif text-xs md:text-xl text-navy mb-2 md:mb-4 uppercase tracking-wider">Ndani Vizionin Tuaj</h3>
+                    <p class="text-[10px] md:text-sm text-navy/70 leading-relaxed">
+                        Tregoni-ni për dasmën e ëndrrave tuaja. Dëgjojmë, mësojmë, krijojmë.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center p-4 md:p-8 reveal delay-200">
+                    <div class="w-12 h-12 md:w-16 md:h-16 border border-gold rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                        <span class="font-serif text-lg md:text-2xl text-gold">2</span>
+                    </div>
+                    <h3 class="font-serif text-xs md:text-xl text-navy mb-2 md:mb-4 uppercase tracking-wider">Dizajni & Degustimi</h3>
+                    <p class="text-[10px] md:text-sm text-navy/70 leading-relaxed">
+                        Dizajni i personalizuar i menusë dhe seancat e degustimit për të përsosur çdo detaj.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center p-4 md:p-8 reveal delay-300">
+                    <div class="w-12 h-12 md:w-16 md:h-16 border border-gold rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                        <span class="font-serif text-lg md:text-2xl text-gold">3</span>
+                    </div>
+                    <h3 class="font-serif text-xs md:text-xl text-navy mb-2 md:mb-4 uppercase tracking-wider">Festoni me Lehtësi</h3>
+                    <p class="text-[10px] md:text-sm text-navy/70 leading-relaxed">
+                        Ne e marrim përsipër gjithçka që ju të mund të përqendroheni në gëzimin e ditës tuaj të veçantë.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E. Service Styles ("What We Deliver") -->
+    <section id="services" class="py-24 md:py-32">
+        <!-- Service 1: Image Left / Text Right -->
+        <div class="grid md:grid-cols-2 gap-0">
+            <div class="relative h-64 md:h-96 overflow-hidden reveal">
+                <img 
+                    src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Elegant Plating" 
+                    class="w-full h-full object-cover img-scale"
+                >
+            </div>
+            <div class="flex items-center px-8 md:px-16 py-12 md:py-0 reveal delay-200 bg-gold">
+                <div>
+                    <span class="text-cream text-sm tracking-widest uppercase">Gastronomi e Lartë</span>
+                    <h3 class="font-serif text-3xl md:text-4xl text-cream mt-4 mb-6">Shkëlqim në Pjatë</h3>
+                    <p class="text-cream/70 leading-relaxed">
+                        Udhëtime gastronome me shumë kurse të krijuara për të plotësuar temën e dasmës tuaj. 
+                        Çdo pjatë është një vepër e shkëlqyer, e prezantuar me art dhe e shërbyer me hijeshi.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 2: Text Left / Image Right (Reversed) -->
+        <div class="grid md:grid-cols-2 gap-0">
+            <div class="flex items-center px-8 md:px-16 py-12 md:py-0 order-2 md:order-1 reveal">
+                <div>
+                    <span class="text-gold text-sm tracking-widest uppercase">Shërbim Elegant</span>
+                    <h3 class="font-serif text-3xl md:text-4xl text-gold mt-4 mb-6">Shërbim i Shkëlqyer</h3>
+                    <p class="text-gold/70 leading-relaxed">
+                        Stafi ynë profesional siguron që çdo mysafir të ndihet si mbret. 
+                        Nga mirëseardhja e parë deri te lamtumira e fundit, shkëlqimi është standardi ynë.
+                    </p>
+                </div>
+            </div>
+            <div class="relative h-64 md:h-96 overflow-hidden order-1 md:order-2 reveal delay-200">
+                <img 
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="White Glove Service" 
+                    class="w-full h-full object-cover img-scale"
+                >
+            </div>
+        </div>
+
+        <!-- Service 3: Image Left / Text Right -->
+        <div class="grid md:grid-cols-2 gap-0">
+            <div class="relative h-64 md:h-96 overflow-hidden reveal">
+                <img 
+                    src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Outdoor Wedding" 
+                    class="w-full h-full object-cover img-scale"
+                >
+            </div>
+            <div class="flex items-center px-8 md:px-16 py-12 md:py-0 reveal delay-200 bg-gold">
+                <div>
+                    <span class="text-cream text-sm tracking-widest uppercase">Vende të Shumëllojshme</span>
+                    <h3 class="font-serif text-3xl md:text-4xl text-cream mt-4 mb-6">Çdo Vendndodhje</h3>
+                    <p class="text-cream/70 leading-relaxed">
+                        Nga sallat madhështore deri te ceremonitë e intime në kopsht, ne sjellim 
+                        ekspertizën tonë kulinarike në vendin e zgjedhur nga ju, duke transformuar çdo hapësirë.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Our Approach -->
+    <section class="py-24 md:py-32 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-gold text-sm tracking-widest uppercase">Qasja Jonë</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-navy mt-4 mb-8 reveal">Krijuar me Pasion</h2>
+            <p class="text-navy/70 text-lg leading-relaxed reveal delay-200">
+                Çdo pjatë tregon një histori. Ekipi ynë i shefave master kombinon teknikat tradicionale me inovacionin modern, 
+                duke siguruar ingredientët më të mirë lokal për të krijuar menu që pasqyrojnë historinë tuaj të veçantë të dashurisë. 
+                Nga degustimi i parë deri te kafshimi i fundit, ne sigurojmë një udhëtim kulinarik të paharrueshëm për ju dhe mysafirët tuaj.
+            </p>
+            <div class="mt-12 grid grid-cols-3 gap-4 md:gap-8 reveal delay-300">
+                <div class="text-center">
+                    <h4 class="font-serif text-2xl md:text-4xl text-gold mb-2">5+</h4>
+                    <p class="text-[10px] md:text-sm text-navy/60">Vite Përvojë</p>
+                </div>
+                <div class="text-center">
+                    <h4 class="font-serif text-2xl md:text-4xl text-gold mb-2">250+</h4>
+                    <p class="text-[10px] md:text-sm text-navy/60">Dasma të Sherbyera</p>
+                </div>
+                <div class="text-center">
+                    <h4 class="font-serif text-2xl md:text-4xl text-gold mb-2">100%</h4>
+                    <p class="text-[10px] md:text-sm text-navy/60">Shkallë Kënaqësie</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Two Images Showcase -->
+    <section class="py-24 md:py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-6 items-center">
+                <div class="relative h-64 md:h-96 overflow-hidden reveal md:col-span-2">
+                    <img 
+                        src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        alt="Wedding Reception" 
+                        class="w-full h-full object-cover img-scale"
+                    >
+                </div>
+                <div class="text-center px-4 reveal md:col-span-1">
+                    <span class="text-gold text-sm tracking-widest uppercase">Premtimi Ynë</span>
+                    <h3 class="font-serif text-2xl md:text-3xl text-navy mt-4 mb-4">Momente të Paharrueshme</h3>
+                    <p class="text-navy/70 text-sm leading-relaxed">
+                        Ne e transformojmë vizionin e dasmës tuaj në realitet, duke krijuar përvoja kulinarike 
+                        që tejkalojnë çdo pritshmëri dhe lëjnë përshtypje të qëndrueshme.
+                    </p>
+                </div>
+                <div class="relative h-64 md:h-96 overflow-hidden reveal delay-200 md:col-span-2">
+                    <img 
+                        src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        alt="Fine Dining Experience" 
+                        class="w-full h-full object-cover img-scale"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section id="menu" class="py-24 md:py-32 px-6 bg-cream">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-gold text-sm tracking-widest uppercase">Arti Kulinar</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-navy mt-4 mb-12 reveal">Filozofia Jonë e Menusë</h2>
+            
+            <div class="grid grid-cols-3 gap-2 md:gap-8 text-center reveal delay-100">
+                <div class="p-4">
+                    <h4 class="font-serif text-xs md:text-lg text-navy mb-2">Parfillues</h4>
+                    <p class="text-[10px] md:text-sm text-navy/60">Shije delikate për të filluar udhëtimin</p>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-serif text-xs md:text-lg text-navy mb-2">Pjatat Kryesore</h4>
+                    <p class="text-[10px] md:text-sm text-navy/60">Krijimet speciale të shefit</p>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-serif text-xs md:text-lg text-navy mb-2">Ëmbëltore</h4>
+                    <p class="text-[10px] md:text-sm text-navy/60">Përfundime të ëmbla për të kujtuar</p>
+                </div>
+            </div>
+
+            <div class="mt-12 reveal delay-200">
+                <a href="#contact" class="inline-block px-8 py-3 border border-gold text-navy hover:bg-gold hover:text-cream transition-all duration-300 text-sm uppercase tracking-widest">
+                    Kërko Menuen e Plotë
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Icons Section -->
+    <section class="py-24 md:py-32 px-6 bg-navy">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-3 gap-8">
+                <!-- Cocktail Icon - Left -->
+                <div class="reveal delay-100 text-left">
+                    <div class="w-20 h-20 mx-auto md:mx-0 mb-6 flex items-left justify-center md:justify-start">
+                        <i class="fas fa-martini-glass text-gold" style="font-size: 48px;"></i>
+                    </div>
+                    <h3 class="font-serif text-xl md:text-2xl text-cream mb-4">Pije & Cocktail</h3>
+                    <p class="text-cream/60 text-sm leading-relaxed">
+                        Pije alkoolike dhe jo-alkoolike të shërbyera me profesionalizëm  Pije alkoolike dhe 
+                    </p>
+                </div>
+
+                <!-- Serving Plate Icon - Middle -->
+                <div class="reveal delay-200 text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-concierge-bell text-gold" style="font-size: 48px;"></i>
+                    </div>
+                    <h3 class="font-serif text-xl md:text-2xl text-cream mb-4">Shërbim i Plotë</h3>
+                    <p class="text-cream/60 text-sm leading-relaxed">
+                        Prezantim dhe shërbim i pjatave në nivel të lartë
+                        rezantim dhe shërbim i pjatave në nivel të lartë
+                    </p>
+                </div>
+
+                <!-- Fork and Knife Icon - Right -->
+                <div class="reveal delay-300 text-right">
+                    <div class="w-20 h-20 mr-0 ml-auto mb-6 flex items-center justify-end">
+                        <i class="fas fa-utensils text-gold" style="font-size: 48px;"></i>
+                    </div>
+                    <h3 class="font-serif text-xl md:text-2xl text-cream mb-4">Restorant i Plotë</h3>
+                    <p class="text-cream/60 text-sm leading-relaxed">
+                        Përvojë komplete gastronomi me shërbim të shkëlqyer  Përvojë komplete
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- F. Contact Section -->
+    <section id="contact" class="py-24 md:py-32 px-6 bg-cream">
+        <div class="max-w-6xl mx-auto">
+            <!-- Tagline -->
+            <div class="text-center mb-4 reveal">
+                <span class="text-gold text-sm tracking-widest uppercase">Na Kontaktoni</span>
+            </div>
+            
+            <!-- Heading -->
+            <h2 class="font-serif text-4xl md:text-5xl text-navy text-center mb-6 reveal">
+                Na Kontaktoni
+            </h2>
+            
+            <!-- Description -->
+            <p class="text-navy/70 text-lg text-center max-w-2xl mx-auto mb-16 reveal">
+                Keni pyetje për catering-un e dasmës tuaj? Do të donim të dëgjonim nga ju. Na kontaktoni për të diskutuar festën tuaj të veçantë.
+            </p>
+            
+            <!-- Contact Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal delay-200">
+                <!-- Email Card -->
+                <div class="bg-cream p-8 border border-gold text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl text-gold mb-2">Email</h3>
+                    <p class="text-gold/60 text-sm mb-4">Na kontaktoni në çdo kohë përmes emailit</p>
+                    <a href="mailto:hello@mezemercatering.com" class="text-gold hover:text-navy transition-colors font-medium underline">
+                        hello@mezemercatering.com
+                    </a>
+                </div>
+                
+                <!-- Phone Card -->
+                <div class="bg-gold p-8 border border-cream/20 text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-cream/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl text-cream mb-2">Telefoni</h3>
+                    <p class="text-cream/60 text-sm mb-4">Hënë - Premte nga 9:00 deri në 18:00</p>
+                    <a href="tel:+1234567890" class="text-cream hover:text-navy transition-colors font-medium underline">
+                        +1 (123) 456-7890
+                    </a>
+                </div>
+                
+                <!-- Office Card -->
+                <div class="bg-cream p-8 border border-gold text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl text-gold mb-2">Zyra</h3>
+                    <p class="text-gold/60 text-sm mb-4">Vizitoni studion tonë të catering-ut</p>
+                    <p class="text-gold font-medium">
+                        123 Wedding Lane, Minnesota
+                    </p>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="text-center mt-16 reveal delay-300">
+                <a href="mailto:hello@mezemercatering.com" class="inline-block px-8 py-3 border border-gold text-navy hover:bg-gold hover:text-cream transition-all duration-300 text-sm uppercase tracking-widest">
+                    Filloni Planifikimin e Eventit Tuaj
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy py-12 px-6 border-t border-gold/20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="text-center md:text-left">
+                <a href="#" class="font-serif text-2xl text-cream tracking-wide">MEZEMER</a>
+                <p class="mt-2 text-cream/50 text-sm">Catering i Veçantë për Dasma</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <a href="#services" class="text-cream/70 hover:text-gold transition-colors text-sm">Shërbimet</a>
+                <a href="#menu" class="text-cream/70 hover:text-gold transition-colors text-sm">Menuja</a>
+                <a href="#about" class="text-cream/70 hover:text-gold transition-colors text-sm">Rreth Nesh</a>
+                <a href="#contact" class="text-cream/70 hover:text-gold transition-colors text-sm">Kontakti</a>
+            </div>
+
+            <div class="text-center md:text-right">
+                <a href="mailto:hello@mezemercatering.com" class="text-cream/70 hover:text-gold transition-colors text-sm">
+                    hello@mezemercatering.com
+                </a>
+            </div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto mt-8 pt-8 border-t border-cream/10 text-center">
+            <p class="text-cream/30 text-xs">© 2026 Website i Krijuar nga sk70342@universum-ks.org</p>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+</body>
+</html>
