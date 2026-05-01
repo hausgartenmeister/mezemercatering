@@ -11,11 +11,18 @@
 }
 
 /* Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
+    min-width: 100vw;
+    overflow-x: hidden;
     background-color: var(--color-cream);
     color: var(--color-navy);
     font-family: 'Cormorant Garamond', serif;
